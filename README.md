@@ -1,5 +1,4 @@
-```markdown
-# 📦 OptiPerish — Uncertainty-Aware Perishable Inventory Decision Intelligence
+# 📦 OptiPerish — Uncertainty-Aware Inventory Decision Intelligence
 
 <div align="center">
 
@@ -13,11 +12,11 @@
 ![Pytest](https://img.shields.io/badge/Testing-Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Portfolio%20Ready-22C55E?style=for-the-badge)
 
-### Turning Demand & Lead-Time Uncertainty into Cost-Optimal Inventory Decisions
+### Turning Demand Uncertainty into Smarter Inventory Decisions
 
 **Forecast • Quantify Uncertainty • Simulate Risk • Optimize • Decide**
 
-[Overview](#-overview) • [Problem Formulation](#-the-core-business-problem) • [Benchmark](#-4-tier-ablation-benchmark) • [Mathematical Foundation](#-mathematical--algorithmic-foundation) • [Architecture](#-system-architecture) • [Quickstart](#-quickstart-guide)
+[Features](#-key-features) • [Architecture](#-architecture) • [Benchmark](#-benchmark) • [Dashboard](#-interactive-dashboard) • [Tech Stack](#-technology-stack) • [Quickstart](#-quickstart-guide)
 
 </div>
 
@@ -25,53 +24,31 @@
 
 ## 🚀 Overview
 
-**OptiPerish** is an enterprise-grade **decision-intelligence platform designed for perishable retail supply chains**.
+**OptiPerish** is an end-to-end **decision-intelligence platform for perishable retail supply chains**.
 
-Traditional retail inventory systems treat demand forecasting as a deterministic point-prediction problem. In production environments, customer demand is non-Gaussian, supplier transit times fluctuate, and excess perishable inventory causes irreversible spoilage and disposal losses.
+Traditional inventory systems often treat demand forecasting as a deterministic point-prediction problem. In real-world operations, customer demand is uncertain, supplier lead times can vary, and excess inventory can create significant spoilage and holding costs.
 
-OptiPerish bridges the gap between **Machine Learning and Operational Decision Science**:
+OptiPerish bridges the gap between **Machine Learning and Operational Decision Science** by combining:
 
 ```text
-Historical Sales Data
-          │
-          ▼
-┌─────────────────────────────────┐
-│     Feature Engineering         │
-└─────────────────┬───────────────┘
-                  │
-                  ▼
-┌─────────────────────────────────┐
-│   LightGBM Demand Forecast      │
-└─────────────────┬───────────────┘
-                  │
-                  ▼
-┌─────────────────────────────────┐
-│  Split Conformal Prediction     │
-│   (Distribution-Free Bounds)    │
-└─────────────────┬───────────────┘
-                  │
-                  ▼
-┌─────────────────────────────────┐
-│   Stochastic Lead-Time Model    │
-│  (Empirical Discrete Probs)     │
-└─────────────────┬───────────────┘
-                  │
-                  ▼
-┌─────────────────────────────────┐
-│ Vectorized Monte Carlo Sim (DDLT)│
-└─────────────────┬───────────────┘
-                  │
-                  ▼
-┌─────────────────────────────────┐
-│ Asymmetric Cost Optimizer (Q*)  │
-└─────────────────┬───────────────┘
-                  │
-                  ▼
-┌─────────────────────────────────┐
-│ Interactive Decision Dashboard  │
-└─────────────────────────────────┘
+Historical Data
+      ↓
+ML Demand Forecast
+      ↓
+Conformal Uncertainty
+      ↓
+Stochastic Lead-Time Simulation
+      ↓
+Monte Carlo Demand Scenarios
+      ↓
+Cost-Aware Inventory Optimization
+      ↓
+Optimal Order Quantity Q*
+      ↓
+Interactive Decision Dashboard
 
 ```
+---
 
 Instead of simply outputting a point estimate (*"Tomorrow's demand will be 500 units"*), OptiPerish solves the operational business objective:
 
@@ -289,9 +266,6 @@ streamlit run app/streamlit_app.py
 ## 👨‍💻 Author
 
 **Bhavya Dhingra**
-
-* **Focus**: Data Science, Machine Learning & Decision Intelligence Systems
-
 
 * **GitHub**: [@Bhxvyx05](https://www.google.com/search?q=https://github.com/Bhxvyx05)
 
